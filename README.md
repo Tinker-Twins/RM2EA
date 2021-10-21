@@ -25,3 +25,21 @@ def RM2EA(R):
         phi = math.atan2(R[1,0]/cos_theta, R[0,0]/cos_theta)
     return psi, theta, phi
 ```
+
+## Usage
+Input:
+```python
+R = np.array([[0.50000, -0.1464, 0.85360],
+              [0.50000, 0.85360, -0.1464],
+              [-0.7071, 0.50000, 0.50000]])
+
+roll, pitch, yaw = RM2EA(R)
+
+print("roll:  {}\npitch: {}\nyaw:   {}".format(roll, pitch, yaw))
+```
+Output:
+```python
+roll:  0.7853981633974483
+pitch: 0.7853885733974476
+yaw:   0.7853981633974483
+```
